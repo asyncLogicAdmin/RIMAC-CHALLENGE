@@ -62,10 +62,6 @@ body {
   height: 100vh;
   background-size: cover;
   background-position: center;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 }
 
 .container__blur--left {
@@ -79,9 +75,6 @@ body {
 .container__blur--right {
   right: 0;
   background-image: url('../images/FlexibleHealthInsurance/blur-asset-right.png');
-  @media (max-width: 768px) {
-    top: -359px;
-  }
 }
 
 h1 {
