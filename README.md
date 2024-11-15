@@ -82,16 +82,14 @@ La aplicación sigue una arquitectura basada en características (feature-based 
 
 Para completar el reto, seguí los siguientes pasos:
 
-	1.	Estructuración del Proyecto:
-      Inicié definiendo la estructura base del proyecto, organizando carpetas y archivos de manera lógica para facilitar la escalabilidad y el mantenimiento.
-	2.	Configuración Inicial:
-    •	Importé las fuentes necesarias según el diseño proporcionado en Figma y las configuré globalmente.
-    •	Establecí un diseño genérico inicial aplicable a etiquetas HTML comunes, asegurando que la base visual estuviera alineada con las especificaciones del diseño.
-	3.	Recursos Visuales:
-    •	Incorporé los íconos y las imágenes requeridas en el proyecto, garantizando que estuvieran optimizados para la web.
-    •	Usé librerías como Material-UI para simplificar la implementación de íconos y mantener consistencia con el diseño.
-	4.	Desarrollo de Funcionalidades (Features):
-    Una vez lista la base del proyecto, comencé a desarrollar las funcionalidades. Este enfoque permitió construir las características del proyecto de manera modular y bien organizada.
+1.	**Estructuración del Proyecto**: Inicié definiendo la estructura base del proyecto, organizando carpetas y archivos de manera lógica para facilitar la escalabilidad y el mantenimiento.
+2.	**Configuración Inicial**:
+  •	Importé las fuentes necesarias según el diseño proporcionado en Figma y las configuré globalmente.
+  •	Establecí un diseño genérico inicial aplicable a etiquetas HTML comunes, asegurando que la base visual estuviera alineada con las especificaciones del diseño.
+3.	**Recursos Visuales**:
+  •	Incorporé los íconos y las imágenes requeridas en el proyecto, garantizando que estuvieran optimizados para la web.
+  •	Usé librerías como Material-UI para simplificar la implementación de íconos y mantener consistencia con el diseño.
+4.	**Desarrollo de Funcionalidades (Features)**: Una vez lista la base del proyecto, comencé a desarrollar las funcionalidades. Este enfoque permitió construir las características del proyecto de manera modular y bien organizada.
 
 ## Scripts de Construcción
 
