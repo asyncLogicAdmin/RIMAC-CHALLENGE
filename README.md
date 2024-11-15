@@ -2,52 +2,73 @@
 
 Este proyecto es una aplicación web construida con React y TypeScript, utilizando una arquitectura basada en características (feature-based structure). A continuación se describe el propósito de las librerías utilizadas y la estructura del proyecto.
 
-[Visita la aplicación desplegada en Amplify](https://main.d18fnk4rz2zoyg.amplifyapp.com/)
+[Visita la aplicación desplegada en Amplify](https://rimac-challenge.asynclogic.net/)
 
-Puedes poner cualquier dato en el formulario (ya tiene validaciones según el campo) y el sistema consumirá el servicio de jsonplaceholder user 1 
+Puedes poner cualquier dato en el formulario (ya tiene validaciones según el campo) y el sistema consumirá el servicio de https://rimac-front-end-challenge.netlify.app/api/user.json 
 
 Ejemplo (puede ser cualquier dato):
 
 ![Ejemplo](public/example.png)
 
-## Librerías Utilizadas
+## 🛠️ Tecnologías y Librerías Utilizadas
 
-### Dependencias
+### Dependencias principales:
+1. **[@emotion/react y @emotion/styled](https://emotion.sh/docs/introduction)**
+   - **Por qué:** Se utilizó para manejar estilos dinámicos y personalizados en el proyecto. Su integración con Material-UI facilita la personalización de componentes.
+   - **Uso:** Crear estilos consistentes con facilidad y flexibilidad.
 
-- **@emotion/react** y **@emotion/styled**: Utilizadas para la estilización de componentes con CSS-in-JS, ofreciendo una solución flexible y poderosa para el diseño y los estilos en componentes React.
+2. **[@mui/material y @mui/icons-material](https://mui.com/)**
+   - **Por qué:** Proporcionan componentes visuales preconstruidos, fáciles de usar y con una buena experiencia de usuario (UX).
+   - **Uso:** Diseño responsivo y componentes como botones, formularios, y menús.
 
-- **@hookform/resolvers**: Proporciona resolutores para la integración de bibliotecas de validación como Yup con React Hook Form, facilitando la validación de formularios.
+3. **[axios](https://axios-http.com/)**
+   - **Por qué:** Simplifica las peticiones HTTP con una API limpia y manejo robusto de errores.
+   - **Uso:** Conexión con APIs para cargar y enviar datos.
 
-- **@mui/icons-material** y **@mui/material**: Implementan los componentes de Material UI, una biblioteca de componentes React que sigue las directrices de Material Design, proporcionando una interfaz de usuario consistente y estilizada.
+4. **[react-hook-form](https://react-hook-form.com/)**
+   - **Por qué:** Para manejar formularios de manera eficiente, minimizando re-renderizados.
+   - **Uso:** Validación de formularios con ayuda de `yup` para las reglas.
 
-- **axios**: Utilizado para hacer solicitudes HTTP de manera eficiente y sencilla, manejando las respuestas y errores de las solicitudes a la API.
+5. **[yup](https://github.com/jquense/yup)**
+   - **Por qué:** Permite la validación de datos mediante esquemas.
+   - **Uso:** Validación de campos en formularios junto con `react-hook-form`.
 
-- **react** y **react-dom**: Las bibliotecas fundamentales para construir interfaces de usuario en React. `react` proporciona la base para la creación de componentes, mientras que `react-dom` se encarga de la integración con el DOM.
+6. **[zustand](https://zustand-demo.pmnd.rs/)**
+   - **Por qué:** Un estado global simple y ligero, ideal para manejar datos compartidos.
+   - **Uso:** Almacén de datos compartidos entre componentes.
 
-- **react-hook-form**: Facilita la gestión de formularios en React, proporcionando una API sencilla para la validación y el manejo de datos del formulario.
+7. **[sass](https://sass-lang.com/)**
+   - **Por qué:** Extiende CSS con funciones como variables, anidación y mixins.
+   - **Uso:** Estilización de los componentes usando la metodología BEM para un código escalable y organizado.
 
-- **react-number-format**: Permite formatear números de manera flexible en los campos de entrada, ideal para trabajar con datos numéricos como precios o cantidades. Se me hizo más sencillo para delimitar los caracteres permitidos en un input
+8. **[react-router-dom](https://reactrouter.com/)**
+   - **Por qué:** Manejo de rutas dinámicas y navegación entre vistas.
+   - **Uso:** Creación de un sistema de rutas para las diferentes páginas del proyecto.
 
-- **react-router-dom**: Maneja la navegación y el enrutamiento en la aplicación web, permitiendo la creación de rutas y enlaces entre diferentes vistas.
+9. **[date-fns](https://date-fns.org/)**
+   - **Por qué:** Proporciona utilidades para manejar fechas de forma sencilla.
+   - **Uso:** Manipular fechas en el proyecto (para calcular la edad del usuario).
 
-- **sass**: Permite usar Sass para la preprocesación de estilos, proporcionando características avanzadas como variables, anidamiento y mixins.
+### Dependencias de desarrollo:
+1. **[typescript](https://www.typescriptlang.org/)**
+   - **Por qué:** Mejora la calidad del código mediante tipado estático.
+   - **Uso:** Garantizar un desarrollo más robusto y predecible.
 
-- **yup**: Utilizado para la validación de datos en combinación con React Hook Form, ofreciendo un esquema de validación robusto y fácil de definir.
+2. **[@vitejs/plugin-react y vite](https://vitejs.dev/)**
+   - **Por qué:** Proporciona un entorno de desarrollo rápido y eficiente.
+   - **Uso:** Configuración y construcción del proyecto.
 
-- **zustand**: Una librería para el manejo del estado global en React, ofreciendo una solución simple y eficiente para compartir estado entre componentes. Elegí esto porque considero que para pasar y estar en el siguiente flujo donde se muestra los datos del vehículo es necesario tener un gestor de estado que verifique que ya se pasó por el primer flujo, es decir tener datos de vehiculo disponibles en el gestor de estado, para ello implementé un componente verificador de rutas.
+3. **[eslint y @typescript-eslint](https://eslint.org/)**
+   - **Por qué:** Asegura un código limpio y libre de errores comunes.
+   - **Uso:** Configuración de reglas para mantener buenas prácticas.
 
-### DevDependencies
+---
 
-
-- **typescript**: Para tener un mejor tipado y control de errores
-
-- **vite**: Un build tool moderno que proporciona una experiencia de desarrollo rápida y eficiente, con soporte integrado para módulos ES y una configuración mínima.
-
-- **yarn**: Gestor de paquetes que se utiliza para manejar las dependencias del proyecto, asegurando la instalación y la gestión eficiente de los paquetes.
+## 🔗 Organización del Proyecto
 
 ## Arquitectura Feature-Based Structure
 
-La aplicación sigue una arquitectura basada en características (feature-based structure). Esta estructura organiza el código en función de las características o funcionalidades de la aplicación, en lugar de por tipo de archivo (componentes, servicios, etc.). 
+La aplicación sigue una arquitectura basada en características (feature-based structure). Esta estructura organiza el código en función de las características o funcionalidades de la aplicación, en lugar de por tipo de archivo (componentes, servicios, etc.).
 
 ### Ventajas de la Arquitectura Feature-Based
 
@@ -58,6 +79,19 @@ La aplicación sigue una arquitectura basada en características (feature-based 
 3. **Colaboración**: Facilita la colaboración entre equipos al permitir que diferentes desarrolladores trabajen en características separadas sin interferir con otras partes del código.
 
 4. **Modularidad**: Promueve la creación de módulos y componentes reutilizables, lo que hace que el código sea más limpio y organizado.
+
+Para completar el reto, seguí los siguientes pasos:
+
+	1.	Estructuración del Proyecto:
+      Inicié definiendo la estructura base del proyecto, organizando carpetas y archivos de manera lógica para facilitar la escalabilidad y el mantenimiento.
+	2.	Configuración Inicial:
+    •	Importé las fuentes necesarias según el diseño proporcionado en Figma y las configuré globalmente.
+    •	Establecí un diseño genérico inicial aplicable a etiquetas HTML comunes, asegurando que la base visual estuviera alineada con las especificaciones del diseño.
+	3.	Recursos Visuales:
+    •	Incorporé los íconos y las imágenes requeridas en el proyecto, garantizando que estuvieran optimizados para la web.
+    •	Usé librerías como Material-UI para simplificar la implementación de íconos y mantener consistencia con el diseño.
+	4.	Desarrollo de Funcionalidades (Features):
+    Una vez lista la base del proyecto, comencé a desarrollar las funcionalidades. Este enfoque permitió construir las características del proyecto de manera modular y bien organizada.
 
 ## Scripts de Construcción
 
